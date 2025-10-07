@@ -24,6 +24,47 @@
       <version>1.5.1</version>
       <scope>provided</scope>
     </dependency>
+    
+     <dependency>
+    <groupId>jakarta.persistence</groupId>
+    <artifactId>jakarta.persistence-api</artifactId>
+    <version>3.1.0</version>
+  </dependency>
+
+  <!-- Hibernate as JPA provider -->
+  <dependency>
+    <groupId>org.hibernate.orm</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>6.4.4.Final</version>
+  </dependency>
+
+  <!-- MySQL JDBC driver -->
+  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<!--<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.20</version>
+</dependency>
+-->
+  <!-- OSGi Aries JPA support -->
+  <dependency>
+    <groupId>org.apache.aries.jpa</groupId>
+    <artifactId>org.apache.aries.jpa.container</artifactId>
+    <version>2.7.3</version>
+  </dependency>
+  
+<dependency>
+  <groupId>org.apache.aries.jpa</groupId>
+  <artifactId>org.apache.aries.jpa.api</artifactId>
+  <version>2.7.3</version>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.aries.tx-control</groupId>
+  <artifactId>tx-control-service-local</artifactId>
+  <version>1.0.1</version>
+</dependency>
+
 	
     <dependency>
       <groupId>junit</groupId>
