@@ -1,0 +1,3 @@
+com\example\karaf\hello\impl\HelloServiceImpl.class
+com\example\karaf\hello\command\HelloCommands.class
+com\example\karaf\hello\entity\Greeting.class
