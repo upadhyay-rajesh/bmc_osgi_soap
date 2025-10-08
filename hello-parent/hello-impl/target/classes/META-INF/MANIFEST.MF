@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.example.hello.impl
+Bnd-LastModified: 1759909467309
+Build-Jdk-Spec: 17
+Bundle-Activator: com.example.hello.impl.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: hello-impl
+Bundle-SymbolicName: com.example.hello.impl
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Import-Package: com.example.hello.api;version="[1.0,2)",java.io,java.lan
+ g,java.lang.invoke,org.apache.cxf.aegis.databinding;version="[4.0,5)",o
+ rg.apache.cxf.databinding;version="[4.0,5)",org.apache.cxf.endpoint;ver
+ sion="[4.0,5)",org.apache.cxf.frontend;version="[4.0,5)",org.osgi.frame
+ work;version="[1.8,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+Tool: Bnd-6.3.1.202206071316

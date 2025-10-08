@@ -1,0 +1,233 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example.osgieqx</groupId>
+    <artifactId>hello-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>equinox-runner</artifactId>
+  <packaging>pom</packaging>
+  <name>Equinox + Jetty (CXF) Hello SOAP :: Runner</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <!-- Copy Equinox OSGi framework jar -->
+          <execution>
+            <id>copy-equinox</id>
+            <phase>package</phase>
+            <goals><goal>copy</goal></goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.eclipse.platform</groupId>
+                  <artifactId>org.eclipse.osgi</artifactId>
+                  <version>${equinox.osgi.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+
+          <!-- Copy our bundles + required libraries into runtime/bundles -->
+          <execution>
+            <id>copy-bundles</id>
+            <phase>package</phase>
+            <goals><goal>copy</goal></goals>
+            <configuration>
+              <artifactItems>
+                <!-- Our bundles -->
+                <artifactItem>
+                  <groupId>com.example.osgieqx</groupId>
+                  <artifactId>hello-api</artifactId>
+                  <version>${project.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.example.osgieqx</groupId>
+                  <artifactId>hello-impl</artifactId>
+                  <version>${project.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+
+                <!-- CXF bundles -->
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-core</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-rt-frontend-simple</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-rt-databinding-aegis</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-rt-bindings-soap</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-rt-transports-http</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.apache.cxf</groupId>
+                  <artifactId>cxf-rt-transports-http-jetty</artifactId>
+                  <version>${cxf.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+
+                <!-- Jetty bundles (OSGi metadata present) -->
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-server</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-servlet</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-http</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-io</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-util</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-security</artifactId>
+                  <version>${jetty.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+
+                <!-- Servlet API for Jetty -->
+                <artifactItem>
+                  <groupId>jakarta.servlet</groupId>
+                  <artifactId>jakarta.servlet-api</artifactId>
+                  <version>5.0.0</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.directory}/runtime/bundles</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>write-config-and-scripts</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <mkdir dir="${project.build.directory}/runtime/configuration"/>
+                <echo file="${project.build.directory}/runtime/configuration/config.ini">
+# Equinox OSGi configuration
+osgi.bundles=\
+file:../bundles/hello-api-1.0.0.jar@start,\
+file:../bundles/hello-impl-1.0.0.jar@start,\
+file:../bundles/cxf-core-${cxf.version}.jar,\
+file:../bundles/cxf-rt-frontend-simple-${cxf.version}.jar,\
+file:../bundles/cxf-rt-databinding-aegis-${cxf.version}.jar,\
+file:../bundles/cxf-rt-bindings-soap-${cxf.version}.jar,\
+file:../bundles/cxf-rt-transports-http-${cxf.version}.jar,\
+file:../bundles/cxf-rt-transports-http-jetty-${cxf.version}.jar,\
+file:../bundles/jetty-http-${jetty.version}.jar,\
+file:../bundles/jetty-io-${jetty.version}.jar,\
+file:../bundles/jetty-util-${jetty.version}.jar,\
+file:../bundles/jetty-server-${jetty.version}.jar,\
+file:../bundles/jetty-security-${jetty.version}.jar,\
+file:../bundles/jetty-servlet-${jetty.version}.jar,\
+file:../bundles/jakarta.servlet-api-5.0.0.jar
+eclipse.consoleLog=true
+                </echo>
+                <echo file="${project.build.directory}/runtime/run.sh">
+#!/usr/bin/env bash
+cd "$(dirname "$0")"
+java -jar org.eclipse.osgi-${equinox.osgi.version}.jar -console -configuration configuration
+                </echo>
+                <chmod file="${project.build.directory}/runtime/run.sh" perm="755"/>
+                <echo file="${project.build.directory}/runtime/run.bat">
+@echo off
+cd /d %~dp0
+java -jar org.eclipse.osgi-${equinox.osgi.version}.jar -console -configuration configuration
+                </echo>
+                <echo file="${project.build.directory}/runtime/README.txt">
+BUILD
+-----
+mvn -q -e -DskipTests package
+
+RUN
+---
+cd equinox-runner/target/runtime
+
+Linux/macOS:
+  ./run.sh
+
+Windows:
+  run.bat
+
+Then open http://localhost:8181/hello?wsdl
+
+Stop Equinox with 'close' or Ctrl+C in the console.
+                </echo>
+              </target>
+            </configuration>
+            <goals><goal>run</goal></goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,431 @@
+!SESSION 2025-10-08 13:39:34.471 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -console -configuration configuration
+
+!ENTRY org.apache.cxf.cxf-core 4 0 2025-10-08 13:39:35.561
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-core [3]
+  Unresolved requirement: Import-Package: com.ctc.wstx.msv; version="[6.6.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.ctc.wstx.stax; version="[6.6.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.codehaus.stax2; version="[4.2.0,5.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.codehaus.stax2.validation; version="[4.2.0,5.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.grammar; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.grammar.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.reader; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.reader.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.tools.internal.xjc.api; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.tools.xjc.api; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.xml.fastinfoset.stax; version="[2.1.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.codemodel.writer; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j.impl; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j.spi; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: net.sf.cglib.proxy; version="[3.3.0,3.4.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop.framework; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.config; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.wiring; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.event; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.type; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.type.classreading; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.util; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.objectweb.asm; version="[9.5.0,10.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.activation; version="[2.0.0,3.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.apache.cxf.cxf-rt-frontend-simple 4 0 2025-10-08 13:39:35.567
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-rt-frontend-simple [4]
+  Unresolved requirement: Import-Package: com.sun.tools.xjc.reader.internalizer; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.config; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind; version="[3.0.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.apache.cxf.cxf-rt-databinding-aegis 4 0 2025-10-08 13:39:35.581
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-rt-databinding-aegis [5]
+  Unresolved requirement: Import-Package: jakarta.jws; version="[3.0.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.apache.cxf.cxf-rt-bindings-soap 4 0 2025-10-08 13:39:35.590
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-rt-bindings-soap [6]
+  Unresolved requirement: Import-Package: jakarta.xml.soap; version="[2.0.0,3.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.apache.cxf.cxf-rt-transports-http 4 0 2025-10-08 13:39:35.596
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-rt-transports-http [7]
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.event; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.util; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.web.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.web.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind; version="[3.0.0,4.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind.annotation; version="[3.0.0,4.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.activation; version="[2.0.0,3.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.apache.cxf.cxf-rt-transports-http-jetty 4 0 2025-10-08 13:39:35.602
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.apache.cxf.cxf-rt-transports-http-jetty [8]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.alpn.server; version="[11.0.0,12.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http2.server; version="[11.0.0,12.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.http,javax.net.ssl,javax.security.auth,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [12]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="11.0.20"; version="11.0.20"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+       org.eclipse.jetty.http [9]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.security; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.security; bundle-symbolic-name="org.eclipse.jetty.security"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.annotation,jakarta.servlet.http,javax.security.auth,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.security.authentication,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.security"
+       org.eclipse.jetty.security [13]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="11.0.20"; version="11.0.20"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.io [10]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.descriptor,jakarta.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.example.hello.api 4 0 2025-10-08 13:39:35.619
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.example.hello.api [1]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.example.hello.impl 4 0 2025-10-08 13:39:35.626
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.example.hello.impl [2]
+  Unresolved requirement: Import-Package: org.apache.cxf.aegis.databinding; version="[4.0.0,5.0.0)"
+    -> Export-Package: org.apache.cxf.aegis.databinding; bundle-symbolic-name="org.apache.cxf.cxf-rt-databinding-aegis"; bundle-version="4.0.4"; version="4.0.4"
+       org.apache.cxf.cxf-rt-databinding-aegis [5]
+         Unresolved requirement: Import-Package: jakarta.jws; version="[3.0.0,4.0.0)"
+  Unresolved requirement: Import-Package: org.apache.cxf.databinding; version="[4.0.0,5.0.0)"
+    -> Export-Package: org.apache.cxf.databinding; bundle-symbolic-name="org.apache.cxf.cxf-core"; bundle-version="4.0.4"; version="4.0.4"
+       org.apache.cxf.cxf-core [3]
+         Unresolved requirement: Import-Package: com.ctc.wstx.msv; version="[6.6.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.ctc.wstx.stax; version="[6.6.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.codehaus.stax2; version="[4.2.0,5.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.codehaus.stax2.validation; version="[4.2.0,5.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.msv.grammar; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.msv.grammar.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.msv.reader; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.msv.reader.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.tools.internal.xjc.api; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.tools.xjc.api; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.xml.fastinfoset.stax; version="[2.1.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: com.sun.codemodel.writer; resolution:="optional"
+         Unresolved requirement: Import-Package: org.slf4j; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.slf4j.impl; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.slf4j.spi; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: net.sf.cglib.proxy; version="[3.3.0,3.4.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.aop; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.aop.framework; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.aop.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans.factory; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans.factory.config; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans.factory.wiring; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.context.event; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.core; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.core.io; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.core.io.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.core.type; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.core.type.classreading; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.util; version="[6.0.0,7.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.objectweb.asm; version="[9.5.0,10.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: jakarta.activation; version="[2.0.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.apache.cxf.endpoint; version="[4.0.0,5.0.0)"
+    -> Export-Package: org.apache.cxf.endpoint; bundle-symbolic-name="org.apache.cxf.cxf-core"; bundle-version="4.0.4"; version="4.0.4"
+  Unresolved requirement: Import-Package: com.example.hello.api; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.example.hello.api; bundle-symbolic-name="com.example.hello.api"; bundle-version="1.0.0"; version="1.0.0"
+       com.example.hello.api [1]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1788)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:39:35.642
+!MESSAGE Bundle initial@file:/C:/Users/R2v/Downloads/osgi-equinox-jetty-cxf-hello/equinox-runner/target/runtime/bundles/hello-api-1.0.0.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:39:35.648
+!MESSAGE Bundle initial@file:/C:/Users/R2v/Downloads/osgi-equinox-jetty-cxf-hello/equinox-runner/target/runtime/bundles/hello-impl-1.0.0.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:39:35.653
+!MESSAGE Could not find bundle: org.eclipse.equinox.console
+!STACK 0
+org.osgi.framework.BundleException: Could not find bundle: org.eclipse.equinox.console
+	at org.eclipse.core.runtime.internal.adaptor.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:69)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:352)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:228)
+
+!ENTRY org.apache.cxf.cxf-core 2 0 2025-10-08 13:39:35.743
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-core [3]
+  Unresolved requirement: Import-Package: com.ctc.wstx.msv; version="[6.6.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.ctc.wstx.stax; version="[6.6.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.codehaus.stax2; version="[4.2.0,5.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.codehaus.stax2.validation; version="[4.2.0,5.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.grammar; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.grammar.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.reader; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.msv.reader.xmlschema; version="[2022.7.0,2023.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.tools.internal.xjc.api; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.tools.xjc.api; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.xml.fastinfoset.stax; version="[2.1.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: com.sun.codemodel.writer; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j.impl; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.slf4j.spi; version="[2.0.0,3.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: net.sf.cglib.proxy; version="[3.3.0,3.4.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop.framework; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.aop.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.config; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.wiring; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.event; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.type; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.type.classreading; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.util; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.objectweb.asm; version="[9.5.0,10.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.activation; version="[2.0.0,3.0.0)"
+
+
+!ENTRY org.eclipse.jetty.servlet 2 0 2025-10-08 13:39:35.749
+!MESSAGE Could not resolve module: org.eclipse.jetty.servlet [14]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.apache.cxf.cxf-rt-transports-http 2 0 2025-10-08 13:39:35.766
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-rt-transports-http [7]
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.event; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.core.io; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.util; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.web.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.web.context.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind; version="[3.0.0,4.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind.annotation; version="[3.0.0,4.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.activation; version="[2.0.0,3.0.0)"
+
+
+!ENTRY org.eclipse.jetty.io 2 0 2025-10-08 13:39:35.774
+!MESSAGE Could not resolve module: org.eclipse.jetty.io [10]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.apache.cxf.cxf-rt-transports-http-jetty 2 0 2025-10-08 13:39:35.780
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-rt-transports-http-jetty [8]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.alpn.server; version="[11.0.0,12.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http2.server; version="[11.0.0,12.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.http,javax.net.ssl,javax.security.auth,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [12]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="11.0.20"; version="11.0.20"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+       org.eclipse.jetty.http [9]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.security; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.security; bundle-symbolic-name="org.eclipse.jetty.security"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.annotation,jakarta.servlet.http,javax.security.auth,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.security.authentication,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.security"
+       org.eclipse.jetty.security [13]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="11.0.20"; version="11.0.20"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.io [10]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[11.0.0,12.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="11.0.20"; version="11.0.20"; uses:="jakarta.servlet,jakarta.servlet.descriptor,jakarta.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+
+!ENTRY org.eclipse.jetty.security 2 0 2025-10-08 13:39:35.786
+!MESSAGE Could not resolve module: org.eclipse.jetty.security [13]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.apache.cxf.cxf-rt-bindings-soap 2 0 2025-10-08 13:39:35.800
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-rt-bindings-soap [6]
+  Unresolved requirement: Import-Package: jakarta.xml.soap; version="[2.0.0,3.0.0)"
+
+
+!ENTRY org.apache.cxf.cxf-rt-frontend-simple 2 0 2025-10-08 13:39:35.807
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-rt-frontend-simple [4]
+  Unresolved requirement: Import-Package: com.sun.tools.xjc.reader.internalizer; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.config; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.support; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.beans.factory.xml; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: org.springframework.context; version="[6.0.0,7.0.0)"; resolution:="optional"
+  Unresolved requirement: Import-Package: jakarta.xml.bind; version="[3.0.0,4.0.0)"
+
+
+!ENTRY com.example.hello.impl 2 0 2025-10-08 13:39:35.813
+!MESSAGE Could not resolve module: com.example.hello.impl [2]
+  Unresolved requirement: Import-Package: com.example.hello.api; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.example.hello.api; bundle-symbolic-name="com.example.hello.api"; bundle-version="1.0.0"; version="1.0.0"
+       com.example.hello.api [1]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+
+!ENTRY com.example.hello.api 2 0 2025-10-08 13:39:35.817
+!MESSAGE Could not resolve module: com.example.hello.api [1]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+
+!ENTRY org.eclipse.jetty.util 2 0 2025-10-08 13:39:35.830
+!MESSAGE Could not resolve module: org.eclipse.jetty.util [11]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.apache.cxf.cxf-rt-databinding-aegis 2 0 2025-10-08 13:39:35.835
+!MESSAGE Could not resolve module: org.apache.cxf.cxf-rt-databinding-aegis [5]
+  Unresolved requirement: Import-Package: jakarta.jws; version="[3.0.0,4.0.0)"
+
+
+!ENTRY org.eclipse.jetty.server 2 0 2025-10-08 13:39:35.841
+!MESSAGE Could not resolve module: org.eclipse.jetty.server [12]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.eclipse.jetty.http 2 0 2025-10-08 13:39:35.845
+!MESSAGE Could not resolve module: org.eclipse.jetty.http [9]
+  Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:39:35.850
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:81)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:228)

@@ -1,0 +1,69 @@
+!SESSION 2025-10-08 13:35:09.726 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -console -configuration configuration
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.250
+!MESSAGE Bundle file:../bundles/hello-api-1.0.0.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.253
+!MESSAGE Bundle file:../bundles/hello-impl-1.0.0.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.257
+!MESSAGE Bundle file:../bundles/cxf-core-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.337
+!MESSAGE Bundle file:../bundles/cxf-rt-frontend-simple-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.349
+!MESSAGE Bundle file:../bundles/cxf-rt-databinding-aegis-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.367
+!MESSAGE Bundle file:../bundles/cxf-rt-bindings-soap-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.376
+!MESSAGE Bundle file:../bundles/cxf-rt-transports-http-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.392
+!MESSAGE Bundle file:../bundles/cxf-rt-transports-http-jetty-4.0.4.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.408
+!MESSAGE Bundle file:../bundles/jetty-http-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.427
+!MESSAGE Bundle file:../bundles/jetty-io-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.439
+!MESSAGE Bundle file:../bundles/jetty-util-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.463
+!MESSAGE Bundle file:../bundles/jetty-server-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.481
+!MESSAGE Bundle file:../bundles/jetty-security-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.493
+!MESSAGE Bundle file:../bundles/jetty-servlet-11.0.20.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.507
+!MESSAGE Bundle file:../bundles/jakarta.servlet-api-5.0.0.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.601
+!MESSAGE Could not find bundle: org.eclipse.equinox.console
+!STACK 0
+org.osgi.framework.BundleException: Could not find bundle: org.eclipse.equinox.console
+	at org.eclipse.core.runtime.internal.adaptor.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:69)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:352)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:228)
+
+!ENTRY org.eclipse.osgi 4 0 2025-10-08 13:35:10.638
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:81)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:228)

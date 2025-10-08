@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <mkdir dir="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/configuration" />
+    <echo file="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/configuration/config.ini"># Equinox OSGi configuration
+osgi.bundles=\
+file:../bundles/hello-api-1.0.0.jar@start,\
+file:../bundles/hello-impl-1.0.0.jar@start,\
+file:../bundles/cxf-core-4.0.4.jar,\
+file:../bundles/cxf-rt-frontend-simple-4.0.4.jar,\
+file:../bundles/cxf-rt-databinding-aegis-4.0.4.jar,\
+file:../bundles/cxf-rt-bindings-soap-4.0.4.jar,\
+file:../bundles/cxf-rt-transports-http-4.0.4.jar,\
+file:../bundles/cxf-rt-transports-http-jetty-4.0.4.jar,\
+file:../bundles/jetty-http-11.0.20.jar,\
+file:../bundles/jetty-io-11.0.20.jar,\
+file:../bundles/jetty-util-11.0.20.jar,\
+file:../bundles/jetty-server-11.0.20.jar,\
+file:../bundles/jetty-security-11.0.20.jar,\
+file:../bundles/jetty-servlet-11.0.20.jar,\
+file:../bundles/jakarta.servlet-api-5.0.0.jar
+eclipse.consoleLog=true</echo>
+    <echo file="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/run.sh">#!/usr/bin/env bash
+cd "$(dirname "$0")"
+java -jar org.eclipse.osgi-3.18.400.jar -console -configuration configuration</echo>
+    <chmod file="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/run.sh" perm="755" />
+    <echo file="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/run.bat">@echo off
+cd /d %~dp0
+java -jar org.eclipse.osgi-3.18.400.jar -console -configuration configuration</echo>
+    <echo file="C:\Users\R2v\Downloads\osgi-equinox-jetty-cxf-hello\equinox-runner\target/runtime/README.txt">BUILD
+-----
+mvn -q -e -DskipTests package
+
+RUN
+---
+cd equinox-runner/target/runtime
+
+Linux/macOS:
+  ./run.sh
+
+Windows:
+  run.bat
+
+Then open http://localhost:8181/hello?wsdl
+
+Stop Equinox with 'close' or Ctrl+C in the console.</echo>
+  </target>
+</project>
