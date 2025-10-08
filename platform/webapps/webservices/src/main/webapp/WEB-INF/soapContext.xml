@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan base-package="org.migus.web.content.soap"/>
+	<bean id="org.apache.cxf.management.InstrumentationManager"
+			class="org.apache.cxf.management.jmx.InstrumentationManagerImpl">
+		<property name="bus" ref="cxf" />
+		<property name="enabled" value="true" />
+	</bean>
+	<jaxws:endpoint implementor="#contentServiceImpl"
+		address="/content-service">
+		<jaxws:features>
+			<cxf:logging />
+		</jaxws:features>
+		<jaxws:schemaLocations>
+			<jaxws:schemaLocation>classpath:/schemas/content.xsd</jaxws:schemaLocation>
+			<jaxws:schemaLocation>classpath:/schemas/content-service.xsd</jaxws:schemaLocation>
+			<jaxws:schemaLocation>classpath:/schemas/content-fault.xsd</jaxws:schemaLocation>
+		</jaxws:schemaLocations>
+		<jaxws:properties>
+			<entry key="schema-validation-enabled" value="true" />
+		</jaxws:properties>
+	</jaxws:endpoint>
+	<jaxws:endpoint implementor="#unwrappedContentServiceImpl" 
+		address="/unwrapped-content-service"
+		wsdlLocation="classpath:/wsdl/content-service.wsdl" 
+		xmlns:tns="http://migus.org/webservices/content-service"
+		serviceName="tns:content-service" endpointName="tns:content-serviceSOAP">
+		<jaxws:features>
+			<cxf:logging />
+		</jaxws:features>
+		<jaxws:schemaLocations>
+			<jaxws:schemaLocation>classpath:/schemas/content.xsd</jaxws:schemaLocation>
+			<jaxws:schemaLocation>classpath:/schemas/content-service.xsd</jaxws:schemaLocation>
+			<jaxws:schemaLocation>classpath:/schemas/content-fault.xsd</jaxws:schemaLocation>
+		</jaxws:schemaLocations>
+	</jaxws:endpoint>
+</beans>
