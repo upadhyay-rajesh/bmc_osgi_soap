@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0"
+          name="com.example.karaf-hello-features">
+  <feature name="karaf-hello" version="1.0.0">
+    <bundle>mvn:com.example.karaf/karaf-hello/1.0.0</bundle>
+  </feature>
+</features>
