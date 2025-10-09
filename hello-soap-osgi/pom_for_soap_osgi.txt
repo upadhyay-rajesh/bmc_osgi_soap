@@ -1,0 +1,119 @@
+//pom for api
+
+<dependencies>
+    <!-- For @WebService (javax.jws) -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>6.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    
+     <dependency>
+      <groupId>javax.jws</groupId>
+      <artifactId>javax.jws-api</artifactId>
+      <version>1.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+
+//pom for impl
+
+<dependencies>
+    <dependency>
+      <groupId>com.example.hello</groupId>
+      <artifactId>hello-api</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- Apache CXF (SOAP) -->
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxws</artifactId>
+      <version>3.4.10</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-transports-http</artifactId>
+      <version>3.4.10</version>
+    </dependency>
+  </dependencies>
+
+//pom for runner
+
+ <dependencies>
+  <!-- Hello API and Impl -->
+  <dependency>
+    <groupId>com.example.hello</groupId>
+    <artifactId>hello-api</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  <dependency>
+    <groupId>com.example.hello</groupId>
+    <artifactId>hello-impl</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+
+  <!-- Jetty 9 for JDK 8 -->
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>9.4.54.v20240208</version>
+  </dependency>
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-servlet</artifactId>
+    <version>9.4.54.v20240208</version>
+  </dependency>
+
+  <!-- javax.servlet -->
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- Apache CXF (Java 8 compatible) -->
+  <dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+    <version>3.4.10</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-rt-transports-http</artifactId>
+    <version>3.4.10</version>
+  </dependency>
+
+  <!-- Spring dependencies required by CXF -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-core</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-beans</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-aop</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<!--  This one fixes ClassNotFoundException -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-web</artifactId>
+  <version>5.3.30</version>
+</dependency>
+
+</dependencies>
