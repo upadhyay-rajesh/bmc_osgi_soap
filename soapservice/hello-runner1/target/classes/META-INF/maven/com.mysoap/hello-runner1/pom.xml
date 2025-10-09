@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.mysoap</groupId>
+    <artifactId>soapservice</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>hello-runner1</artifactId>
+
+
+
+  
+  <packaging>jar</packaging>
+
+  <dependencies>
+  <!-- Hello API and Impl -->
+  <dependency>
+    <groupId>com.example.hello</groupId>
+    <artifactId>hello-api</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  <dependency>
+    <groupId>com.example.hello</groupId>
+    <artifactId>hello-impl</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+
+  <!-- Jetty 9 for JDK 8 -->
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>9.4.54.v20240208</version>
+  </dependency>
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-servlet</artifactId>
+    <version>9.4.54.v20240208</version>
+  </dependency>
+
+  <!-- javax.servlet -->
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- Apache CXF (Java 8 compatible) -->
+  <dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+    <version>3.4.10</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.cxf</groupId>
+    <artifactId>cxf-rt-transports-http</artifactId>
+    <version>3.4.10</version>
+  </dependency>
+
+  <!-- Spring dependencies required by CXF -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-core</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-beans</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-aop</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<!-- ✅ This one fixes ClassNotFoundException -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-web</artifactId>
+  <version>5.3.30</version>
+</dependency>
+
+  	<dependency>
+  		<groupId>com.mysoap</groupId>
+  		<artifactId>hello-api1</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<!-- Apache CXF WS-Security -->
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-ws-security</artifactId>
+  <version>3.4.10</version>
+</dependency>
+
+<!-- WSS4J (security processing) -->
+<dependency>
+  <groupId>org.apache.wss4j</groupId>
+  <artifactId>wss4j-ws-security-common</artifactId>
+  <version>2.3.3</version>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-ws-security</artifactId>
+  <version>3.4.10</version>
+</dependency>
+<!-- CXF Jetty HTTP transport (embedded server) -->
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-transports-http-jetty</artifactId>
+  <version>3.4.10</version>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.wss4j</groupId>
+  <artifactId>wss4j-ws-security-common</artifactId>
+  <version>2.3.3</version>
+</dependency>
+
+
+  </dependencies>
+  
+  <plugin>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-codegen-plugin</artifactId>
+  <version>3.4.10</version>
+  <executions>
+    <execution>
+      <id>generate-sources</id>
+      <phase>generate-sources</phase>
+      <configuration>
+        <wsdlOptions>
+          <wsdlOption>
+            <wsdl>http://localhost:8084/services/services/HelloService?wsdl</wsdl>
+            <extraargs>
+              <extraarg>-p</extraarg>
+              <extraarg>com.example.hello.client.ws</extraarg>
+            </extraargs>
+          </wsdlOption>
+        </wsdlOptions>
+      </configuration>
+      <goals>
+        <goal>wsdl2java</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+
+
+</project>
+
+
