@@ -1,0 +1,112 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example.hello</groupId>
+    <artifactId>hello-soap-osgi</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>hello-runner</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.example.hello</groupId>
+      <artifactId>hello-api</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.example.hello</groupId>
+      <artifactId>hello-impl</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <!-- Equinox OSGi -->
+    <dependency>
+      <groupId>org.eclipse.platform</groupId>
+      <artifactId>org.eclipse.osgi</artifactId>
+      <version>3.18.500</version>
+    </dependency>
+
+    <!-- Jetty -->
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>9.4.54.v20240208</version>
+    </dependency>
+  <!--  <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+      <version>11.0.15</version>
+    </dependency>
+    -->
+    
+    <dependency>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-servlet</artifactId>
+  <version>9.4.54.v20240208</version>
+</dependency>
+
+    
+<dependency>
+  <groupId>javax.servlet</groupId>
+  <artifactId>javax.servlet-api</artifactId>
+  <version>4.0.1</version>
+  <scope>provided</scope>
+</dependency>
+
+
+
+    <!-- CXF -->
+  <!-- CXF JAX-RS frontend -->
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+  <version>3.4.10</version>
+</dependency>
+
+<!-- CXF HTTP transport -->
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-transports-http</artifactId>
+  <version>3.4.10</version>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-transports-http-jetty</artifactId>
+  <version>3.4.10</version>
+</dependency>
+
+<!-- Spring dependencies required by CXF -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-core</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-beans</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-aop</artifactId>
+  <version>5.3.30</version>
+</dependency>
+<!-- ✅ This one fixes ClassNotFoundException -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-web</artifactId>
+  <version>5.3.30</version>
+</dependency>
+
+    
+   
+
+  </dependencies>
+</project>
