@@ -1,0 +1,51 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mysoap</groupId>
+    <artifactId>soapservice</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>hello-api1</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- For @WebService (javax.jws) -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>6.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    
+     <dependency>
+      <groupId>javax.jws</groupId>
+      <artifactId>javax.jws-api</artifactId>
+      <version>1.1</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    
+    <dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-frontend-jaxws</artifactId>
+  <version>3.4.10</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-transports-http-jetty</artifactId>
+  <version>3.4.10</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-rt-ws-security</artifactId>
+  <version>3.4.10</version>
+</dependency>
+<dependency>
+  <groupId>javax.activation</groupId>
+  <artifactId>activation</artifactId>
+  <version>1.1.1</version>
+</dependency>
+  </dependencies>
+</project>
